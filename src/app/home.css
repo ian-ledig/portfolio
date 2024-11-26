@@ -19,20 +19,28 @@
     padding: 10% 0 10% 0;
     gap: 15%;
 
-    background-image: url("/image/background.png");
+    background-image: url("/background.png");
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center bottom -120px;
 
+    .card{
+        background: linear-gradient(90deg, #F5F5F0, white);
+        padding: 15px 12px 15px 12px;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    }
+
     .item{
         align-self: center;
+        text-align: center;
     }
 }
 
 .category{
     background-color: #FFFFFF;
 
-    .title{
+    .category-title{
         margin: 30px 0 0 10%;
         font-size: 1.5em;
         font-weight: bold;
@@ -42,7 +50,7 @@
         display: inline-block;
     }
 
-    .title::after {
+    .category-title::after {
         content: '';
         position: absolute;
         bottom: 0;
@@ -58,7 +66,8 @@
         gap: 2%;
 
         .item{
-            padding: 3% 0 6% 0;
+            align-self: center;
+            padding: 1% 0 4% 0;
         }
     }
 }

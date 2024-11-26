@@ -1,4 +1,4 @@
-const ProjectComponent = () => {
+const ProjectCardComponent = () => {
     return (
         <div>
             <h1>Project</h1>
@@ -6,4 +6,4 @@ const ProjectComponent = () => {
     );
 };
 
-export default ProjectComponent;
+export default ProjectCardComponent;
