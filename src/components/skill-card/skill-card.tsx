@@ -1,8 +1,9 @@
 import Image from "next/image";
+import "./skill-card.css";
 
-const SkillCardComponent = ({ href, src, alt, width = 60 }) => {
+const SkillCardComponent = ({ title, color0, color1, href, src, alt, width = 60 }) => {
     return (
-        <a className="item" href={href} target="_blank">
+        <a href={href} target="_blank">
             <Image
                 className="dark:invert"
                 src={src}
@@ -11,6 +12,12 @@ const SkillCardComponent = ({ href, src, alt, width = 60 }) => {
                 height={0}
                 priority
             />
+            <div
+                className="skill-card-title"
+                style={{ '--color0': color0, '--color1': color1 }}
+            >
+                {title}
+            </div>
         </a>
     );
 };

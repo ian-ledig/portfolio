@@ -1,5 +1,6 @@
 import Image from "next/image";
 import "./home.css";
+import RandomTextComponent from "../components/random-text/random-text.tsx";
 import SkillCardComponent from '../components/skill-card/skill-card.tsx';
 import ProjectCardComponent from '../components/project-card/project-card.tsx';
 
@@ -8,27 +9,27 @@ export default function Home() {
     <div>
       <div className="navigation">
         <div className="left">
-          <div className="navigation-element">
+          <a href="#home" className="navigation-element">
             Home
-          </div>
-          <div className="navigation-element">
+          </a>
+          <a href="#collaborations" className="navigation-element">
             Collaborations
-          </div>
-          <div className="navigation-element">
+          </a>
+          <a href="#specialization" className="navigation-element">
             Specialization
-          </div>
-          <div className="navigation-element">
+          </a>
+          <a href="#projects" className="navigation-element">
             Projects
-          </div>
-          <div className="navigation-element">
+          </a>
+          <a href="" className="navigation-element">
             CV
-          </div>
+          </a>
         </div>
         <div className="navigation-element">
           Contact
         </div>
       </div>
-      <div className="home">
+      <div className="home" id="home">
         <div className="item">
           <Image
             className="dark:invert"
@@ -38,20 +39,20 @@ export default function Home() {
             height={38}
             priority
           />
-          <div className="title-2 text-white mt-1">
+          <div className="title-1 text-white mt-1">
             Ian LEDIG
           </div>
           <div className="chip bg-green-400 mt-1">
             Open to work
           </div>
         </div>
-        <div className="item">
-          <div className="title-1">
-            Need a website ?
-          </div>
+        <div className="item home-text w-2/5">
+          <div className="mr-2">Need a</div>
+          <RandomTextComponent />
+          <div>?</div>
         </div>
       </div>
-      <div className="category">
+      <div className="category" id="collaborations">
         <div className="category-title">
           Collaborations
         </div>
@@ -108,20 +109,27 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <div className="category">
+      <div className="category" id="specialization">
         <div className="category-title">
           Specialization
         </div>
         <div className="content">
           <div className="item">
             <SkillCardComponent
+                title="Angular"
+                color0="#DF145A"
+                color1="#7A09F3"
                 href="https://angular.dev/"
                 src="/skills/angular.svg"
                 alt="Angular logo"
+                width={55}
             />
           </div>
           <div className="item">
             <SkillCardComponent
+                title="React"
+                color0="#61DAFB"
+                color1="#61DAFB"
                 href="https://react.dev/"
                 src="/skills/react.svg"
                 alt="React logo"
@@ -129,6 +137,49 @@ export default function Home() {
           </div>
           <div className="item">
             <SkillCardComponent
+                title="Ionic"
+                color0="#4E8EF7"
+                color1="#4E8EF7"
+                href="https://ionicframework.com/"
+                src="/skills/ionic.svg"
+                alt="Ionic logo"
+            />
+          </div>
+          <div className="item">
+            <SkillCardComponent
+                title="Electron"
+                color0="#47848F"
+                color1="#47848F"
+                href="https://electronjs.org/"
+                src="/skills/electron.svg"
+                alt="Electron logo"
+            />
+          </div>
+          <div className="item">
+            <SkillCardComponent
+                title="Android"
+                color0="#A4C439"
+                color1="#A4C439"
+                href="https://android.com/"
+                src="/skills/android.svg"
+                alt="Android logo"
+            />
+          </div>
+          <div className="item">
+            <SkillCardComponent
+                title="Apple"
+                color0="#000000"
+                color1="#000000"
+                href="https://apple.com/"
+                src="/skills/apple.svg"
+                alt="Apple logo"
+            />
+          </div>
+          <div className="item">
+            <SkillCardComponent
+                title="Python"
+                color0="#3A76A6"
+                color1="#3A76A6"
                 href="https://python.org/"
                 src="/skills/python.svg"
                 alt="Python logo"
@@ -136,6 +187,9 @@ export default function Home() {
           </div>
           <div className="item">
             <SkillCardComponent
+                title="Java"
+                color0="#0074BD"
+                color1="#0074BD"
                 href="https://java.com/"
                 src="/skills/java.svg"
                 alt="Java logo"
@@ -143,6 +197,9 @@ export default function Home() {
           </div>
           <div className="item">
             <SkillCardComponent
+                title="Spring"
+                color0="#77BC1F"
+                color1="#77BC1F"
                 href="https://spring.io/"
                 src="/skills/spring.svg"
                 alt="Spring logo"
@@ -150,6 +207,9 @@ export default function Home() {
           </div>
           <div className="item">
             <SkillCardComponent
+                title="C++"
+                color0="#659AD2"
+                color1="#004482"
                 href=""
                 src="/skills/cpp.svg"
                 alt="C++ logo"
@@ -157,6 +217,9 @@ export default function Home() {
           </div>
           <div className="item">
             <SkillCardComponent
+                title="C#"
+                color0="#9B4F96"
+                color1="#68217A"
                 href=""
                 src="/skills/csharp.svg"
                 alt="CSharp logo"
@@ -164,7 +227,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="category">
+      <div className="category" id="projects">
         <div className="category-title">
           Projects
         </div>

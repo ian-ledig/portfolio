@@ -22,7 +22,7 @@ const ProjectCardComponent = ({image, title, description, chips, github}) => {
                 ))}
             </div>
             <div className="project-card-content">
-                <div className="title-2">{title}</div>
+                <div className="title-1">{title}</div>
                 <div>{description}</div>
             </div>
             <div className="project-card-footer">
