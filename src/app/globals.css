@@ -19,7 +19,11 @@ body {
   background: var(--background);
 }
 
-.title{
+.title-1{
+  font-size: 2em;
+}
+
+.title-2{
   font-size: 1.5em;
   font-weight: bold;
 }
@@ -27,7 +31,6 @@ body {
 .chip{
   display: inline-block;
   border-radius: 0.375rem;
-  background-color: #16a34a;
   padding: 0.125rem 0.625rem;
   font-size: 0.875rem;
   color: white;

@@ -15,7 +15,7 @@ export default function Home() {
             Collaborations
           </div>
           <div className="navigation-element">
-            Knowledges
+            Specialization
           </div>
           <div className="navigation-element">
             Projects
@@ -29,26 +29,24 @@ export default function Home() {
         </div>
       </div>
       <div className="home">
-        <div className="card">
-          <div className="item">
-            <Image
-              className="dark:invert"
-              src="/profile.png"
-              alt="Next.js logo"
-              width={180}
-              height={38}
-              priority
-            />
-            <div className="title mt-1">
-              Ian LEDIG
-            </div>
-            <div className="chip mt-1">
-              Open to work
-            </div>
+        <div className="item">
+          <Image
+            className="dark:invert"
+            src="/profile.png"
+            alt="Next.js logo"
+            width={180}
+            height={38}
+            priority
+          />
+          <div className="title-2 text-white mt-1">
+            Ian LEDIG
+          </div>
+          <div className="chip bg-green-400 mt-1">
+            Open to work
           </div>
         </div>
         <div className="item">
-          <div className="title">
+          <div className="title-1">
             Need a website ?
           </div>
         </div>
@@ -112,7 +110,7 @@ export default function Home() {
       </div>
       <div className="category">
         <div className="category-title">
-          Knowledges
+          Specialization
         </div>
         <div className="content">
           <div className="item">
@@ -172,10 +170,29 @@ export default function Home() {
         </div>
         <div className="content">
           <div className="item">
-            <ProjectCardComponent />
+            <ProjectCardComponent 
+              image="/projects/kanjitest.png"
+              title="日本語 Vocabulary Test"
+              description="Interactive app designed to help users to learn and memorize Japanese vocabulary."
+              chips={[
+                { label: "Electron", color: "bg-cyan-500" },
+                { label: "Javascript", color: "bg-amber-300" },
+                { label: "HTML", color: "bg-orange-500" },
+                { label: "CSS", color: "bg-sky-600" }
+              ]}
+              github="https://github.com/ian-ledig/kanji-test"
+            />
           </div>
           <div className="item">
-            <ProjectCardComponent />
+            <ProjectCardComponent 
+              image="/projects/kanjitest.png"
+              title="teeessfsf"
+              description="serserwsersdzrsfsefse"
+              chips={[
+                { label: "Electron", color: "bg-cyan-500" }
+              ]}
+              github=""
+            />
           </div>
         </div>
       </div>

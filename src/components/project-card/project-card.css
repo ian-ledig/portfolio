@@ -1,0 +1,36 @@
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    overflow: hidden;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+
+    .project-card-image {
+        position: relative;
+        height: 180px;
+    }
+
+    .project-card-chips{
+        display: flex;
+        justify-content: center;
+        gap: 2px;
+        padding-top: 2px;
+    }
+
+    .project-card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        text-align: justify;
+        gap: 10px;
+        padding: 10px 15px;
+        font-size: 0.8em;
+    }
+
+    .project-card-footer{
+        margin: auto 7px 7px auto;
+    }
+}
