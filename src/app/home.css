@@ -12,7 +12,7 @@
 .home{
     display: flex;
     justify-content: center;
-    padding: 11% 0 11% 0;
+    padding: 13% 0 13% 0;
     gap: 40px;
 
     background-image: url("/background.png");

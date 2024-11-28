@@ -27,7 +27,7 @@ const ProjectCardComponent = ({image, title, description, chips, links}) => {
             </div>
             <div className="project-card-footer">
                 {links.map((link, index) => (
-                    <ButtonComponent text={link.label} href={link.href} />
+                    <ButtonComponent key={index} text={link.label} href={link.href} />
                 ))}
             </div>
         </div>
