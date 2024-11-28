@@ -1,9 +1,9 @@
 import "./button.css";
 
-const ButtonComponent = ({href}) => {
+const ButtonComponent = ({text, href}) => {
     return (
         <a className="button" href={href} target="_blank">
-            Check on Github
+            {text}
         </a>
     );
 };

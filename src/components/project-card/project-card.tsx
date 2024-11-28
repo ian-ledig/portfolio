@@ -2,7 +2,7 @@ import Image from "next/image";
 import ButtonComponent from "../button/button.tsx";
 import "./project-card.css";
 
-const ProjectCardComponent = ({image, title, description, chips, github}) => {
+const ProjectCardComponent = ({image, title, description, chips, links}) => {
     return (
         <div className="project-card">
             <div className="project-card-image">
@@ -26,7 +26,9 @@ const ProjectCardComponent = ({image, title, description, chips, github}) => {
                 <div>{description}</div>
             </div>
             <div className="project-card-footer">
-                {github && <ButtonComponent href={github} />}
+                {links.map((link, index) => (
+                    <ButtonComponent text={link.label} href={link.href} />
+                ))}
             </div>
         </div>
     );

@@ -7,42 +7,39 @@ import ProjectCardComponent from '../components/project-card/project-card.tsx';
 export default function Home() {
   return (
     <div>
-      <div className="navigation">
-        <div className="left">
-          <a href="#home" className="navigation-element">
-            Home
-          </a>
-          <a href="#collaborations" className="navigation-element">
-            Collaborations
-          </a>
-          <a href="#specialization" className="navigation-element">
-            Specialization
-          </a>
-          <a href="#projects" className="navigation-element">
-            Projects
-          </a>
-          <a href="" className="navigation-element">
-            CV
-          </a>
-        </div>
-        <div className="navigation-element">
-          Contact
-        </div>
-      </div>
       <div className="home" id="home">
+        <div className="navigation-bar">
+          <div className="left">
+            <a href="#home" className="navigation-element">
+              Home
+            </a>
+            <a href="#collaborations" className="navigation-element">
+              Collaborations
+            </a>
+            <a href="#specialization" className="navigation-element">
+              Specialization
+            </a>
+            <a href="#projects" className="navigation-element">
+              Projects
+            </a>
+          </div>
+          <a href="" className="navigation-element">
+            Contact
+          </a>
+        </div>
         <div className="item">
           <Image
             className="dark:invert"
             src="/profile.png"
             alt="Next.js logo"
-            width={180}
+            width={250}
             height={38}
             priority
           />
-          <div className="title-1 text-white mt-1">
+          <div className="text-3xl font-bold text-white mt-1">
             Ian LEDIG
           </div>
-          <div className="chip bg-green-400 mt-1">
+          <div className="home-chip">
             Open to work
           </div>
         </div>
@@ -57,7 +54,7 @@ export default function Home() {
           Collaborations
         </div>
         <div className="content">
-          <a href="https://airfrance.fr/" className="item">
+          <a href="https://airfrance.fr/" target="_blank" className="item">
             <Image
               className="dark:invert"
               src="/collaboration/airfrance.svg"
@@ -67,7 +64,7 @@ export default function Home() {
               priority
             />
           </a>
-          <a href="https://probtp.com/" className="item">
+          <a href="https://probtp.com/" target="_blank" className="item">
             <Image
               className="dark:invert"
               src="/collaboration/probtp.png"
@@ -77,7 +74,7 @@ export default function Home() {
               priority
             />
           </a>
-          <a href="https://cawe.com/" className="item">
+          <a href="https://cawe.com/" target="_blank" className="item">
             <Image
               className="dark:invert"
               src="/collaboration/cawe.svg"
@@ -87,21 +84,31 @@ export default function Home() {
               priority
             />
           </a>
-          <a href="https://moonflyff.fr/" className="item">
+          <a href="" target="_blank" className="item">
             <Image
               className="dark:invert"
-              src="/collaboration/moonflyff.png"
-              alt="Moon Flyff logo"
+              src="/collaboration/forsakenkingdom.png"
+              alt="Forsaken Kingdom logo"
               width={120}
               height={0}
               priority
             />
           </a>
-          <a href="" className="item">
+          <a href="" target="_blank" className="item">
             <Image
               className="dark:invert"
-              src="/collaboration/forsakenkingdom.png"
-              alt="Forsaken Kingdom logo"
+              src="/collaboration/alysiaonline.png"
+              alt="Alysia Online logo"
+              width={120}
+              height={0}
+              priority
+            />
+          </a>
+          <a href="https://moonflyff.fr/" target="_blank" className="item">
+            <Image
+              className="dark:invert"
+              src="/collaboration/moonflyff.png"
+              alt="Moon Flyff logo"
               width={120}
               height={0}
               priority
@@ -234,6 +241,39 @@ export default function Home() {
         <div className="content">
           <div className="item">
             <ProjectCardComponent 
+              image="/projects/airfrance.png"
+              title="Airport Flight Consultation"
+              description="Development of a flight, passenger, baggage consultation application for airport agents. Including architecture, development, testing, deployment and production release on the cloud."
+              chips={[
+                { label: "Angular", color: "bg-rose-400" },
+                { label: "Java", color: "bg-cyan-200" },
+                { label: "Spring", color: "bg-green-400" },
+                { label: "SQL", color: "bg-neutral-100" },
+                { label: "Azure", color: "bg-sky-500" },
+              ]}
+              links={[]}
+            />
+          </div>
+          <div className="item">
+            <ProjectCardComponent 
+              image="/projects/moncompteretraite.png"
+              title="French Retirement Application"
+              description="Development of “Mon Compte Retraite” mobile application for iOS and Android, ensured communication security, production monitoring and designed batch processes."
+              chips={[
+                { label: "Angular", color: "bg-rose-400" },
+                { label: "Ionic", color: "bg-sky-300" },
+                { label: "Java", color: "bg-cyan-200" },
+                { label: "Spring", color: "bg-green-400" },
+                { label: "SQL", color: "bg-neutral-100" },
+              ]}
+              links={[
+                { label:"IOS", href:"https://apps.apple.com/fr/app/mon-compte-retraite/id1176066236" },
+                { label:"Android", href:"https://play.google.com/store/apps/details?id=fr.agircarrco.smartretraite" },
+              ]}
+            />
+          </div>
+          <div className="item">
+            <ProjectCardComponent 
               image="/projects/kanjitest.png"
               title="日本語 Vocabulary Test"
               description="Interactive app designed to help users to learn and memorize Japanese vocabulary."
@@ -243,18 +283,64 @@ export default function Home() {
                 { label: "HTML", color: "bg-orange-500" },
                 { label: "CSS", color: "bg-sky-600" }
               ]}
-              github="https://github.com/ian-ledig/kanji-test"
+              links={[
+                { label:"Github", href:"https://github.com/ian-ledig/kanji-test" },
+              ]}
             />
           </div>
           <div className="item">
             <ProjectCardComponent 
-              image="/projects/kanjitest.png"
-              title="teeessfsf"
-              description="serserwsersdzrsfsefse"
+              image="/projects/cawe.png"
+              title="CAWE Stock Traceability"
+              description="Development of a stock traceability mobile application for Android platforms."
               chips={[
-                { label: "Electron", color: "bg-cyan-500" }
+                { label: "C#", color: "bg-fuchsia-100" },
+                { label: "Xamarin", color: "bg-sky-300" },
+                { label: "SQL", color: "bg-neutral-100" },
               ]}
-              github=""
+              links={[]}
+            />
+          </div>
+          <div className="item">
+            <ProjectCardComponent 
+              image="/projects/alysiaonline.png"
+              title="MMORPG Alysia Online"
+              description="Modernizing a older open-source multiplayer game by incorporating current industry gameplay standards, mechanics and optimized the codebase to align with contemporary user expectations and performance benchmarks."
+              chips={[
+                { label: "C++", color: "bg-cyan-500" },
+                { label: "SQL", color: "bg-neutral-100" },
+              ]}
+              links={[]}
+            />
+          </div>
+        </div>
+        <div className="content">
+          <div className="item">
+            <ProjectCardComponent 
+              image="/projects/dynamx.png"
+              title="3D Model converter"
+              description="Contains two programs that allow converting Toolbox .java models designed for Minecraft Flan's mod to work with the DynamX mod."
+              chips={[
+                { label: "Python", color: "bg-yellow-400" },
+                { label: "Java", color: "bg-cyan-200" },
+              ]}
+              links={[
+                { label:"Github", href:"https://github.com/ian-ledig/FlanToDynamX" },
+              ]}
+            />
+          </div>
+          <div className="item">
+            <ProjectCardComponent 
+              image="/projects/archeroes.png"
+              title="Serious Archeology Game"
+              description="Archeroes is a serious game designed to introduce players to the basics and principles of archaeology."
+              chips={[
+                { label: "Java", color: "bg-cyan-200" },
+                { label: "JavaFX", color: "bg-sky-300" },
+              ]}
+              links={[
+                { label:"Github", href:"https://github.com/ian-ledig/ekip-serious-game-archeros" },
+              ]}
             />
           </div>
         </div>

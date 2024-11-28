@@ -1,23 +1,23 @@
 .project-card {
     background-color: white;
     border-radius: 10px;
-    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     overflow: hidden;
     width: 300px;
-    height: 400px;
+    height: 300px;
     display: flex;
     flex-direction: column;
 
     .project-card-image {
         position: relative;
-        height: 180px;
+        height: 100px;
     }
 
     .project-card-chips{
         display: flex;
         justify-content: center;
         gap: 2px;
-        padding-top: 2px;
+        padding-top: 6px;
     }
 
     .project-card-content {
@@ -27,10 +27,20 @@
         text-align: justify;
         gap: 10px;
         padding: 10px 15px;
-        font-size: 0.8em;
+        font-size: 0.7em;
     }
 
-    .project-card-footer{
+    .project-card-footer {
+        display: flex;
+        gap: 4px;
         margin: auto 7px 10px auto;
     }
+
+    transform: scale(1);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.04);
+    transition: all 0.3s ease;
 }
