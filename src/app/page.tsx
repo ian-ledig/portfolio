@@ -239,7 +239,7 @@ export default function Home() {
           Projects
         </div>
         <div className="content">
-          <div className="item">
+          <div className="project-item">
             <ProjectCardComponent 
               image="/projects/airfrance.png"
               title="Airport Flight Consultation"
@@ -254,7 +254,7 @@ export default function Home() {
               links={[]}
             />
           </div>
-          <div className="item">
+          <div className="project-item">
             <ProjectCardComponent 
               image="/projects/moncompteretraite.png"
               title="French Retirement Application"
@@ -272,7 +272,7 @@ export default function Home() {
               ]}
             />
           </div>
-          <div className="item">
+          <div className="project-item">
             <ProjectCardComponent 
               image="/projects/kanjitest.png"
               title="日本語 Vocabulary Test"
@@ -288,7 +288,7 @@ export default function Home() {
               ]}
             />
           </div>
-          <div className="item">
+          <div className="project-item">
             <ProjectCardComponent 
               image="/projects/cawe.png"
               title="CAWE Stock Traceability"
@@ -301,7 +301,7 @@ export default function Home() {
               links={[]}
             />
           </div>
-          <div className="item">
+          <div className="project-item">
             <ProjectCardComponent 
               image="/projects/alysiaonline.png"
               title="MMORPG Alysia Online"
@@ -315,7 +315,7 @@ export default function Home() {
           </div>
         </div>
         <div className="content">
-          <div className="item">
+          <div className="project-item">
             <ProjectCardComponent 
               image="/projects/dynamx.png"
               title="3D Model converter"
@@ -329,7 +329,7 @@ export default function Home() {
               ]}
             />
           </div>
-          <div className="item">
+          <div className="project-item">
             <ProjectCardComponent 
               image="/projects/archeroes.png"
               title="Serious Archeology Game"

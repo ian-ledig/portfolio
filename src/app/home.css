@@ -66,7 +66,7 @@
     background-color: #FFFFFF;
 
     .category-title{
-        margin: 30px 0 0 10%;
+        margin: 10px 0 0 10%;
         font-size: 1.5em;
         font-weight: bold;
         text-transform: uppercase;
@@ -92,7 +92,12 @@
 
         .item{
             align-self: center;
-            padding: 10px 0 20px 0;
+            padding: 40px 0 80px 0;
+        }
+
+        .project-item{
+            align-self: center;
+            padding: 20px 0 20px 0;
         }
     }
 }
